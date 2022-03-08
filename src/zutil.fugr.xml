@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Utility Tools for Program Constants</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZUTILTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZUTIL</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZUTIL_PGM_CONSTANTS</FUNCNAME>
+     <SHORT_TEXT>Utility Tools for Program Constants</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IM_PGMID</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZPGMID</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_PGM_CONST_VALUES</PARAMETER>
+       <DBSTRUCT>ZSPGM_CONST_VALUES</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_ERROR_CONST</PARAMETER>
+       <DBSTRUCT>ZSERROR_CONST</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>EX_NO_ENTRIES_FOUND</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>EX_CONST_ENTRY_MISSING</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IM_PGMID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Program ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_PGM_CONST_VALUES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Program Constant Values</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_ERROR_CONST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Constants Missing in TVARVC table</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_NO_ENTRIES_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>No Entries Found</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_CONST_ENTRY_MISSING</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Constant Entry missing in TVARVC</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

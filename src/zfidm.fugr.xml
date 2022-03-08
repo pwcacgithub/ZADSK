@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Autodesk Data Migration</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFIDMTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFIDM</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFI_RFC_CREATE_TEXT</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Create Text - RFC</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>FID</PARAMETER>
+       <TYP>THEAD-TDID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FLANGUAGE</PARAMETER>
+       <TYP>THEAD-TDSPRAS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FNAME</PARAMETER>
+       <TYP>THEAD-TDNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FOBJECT</PARAMETER>
+       <TYP>THEAD-TDOBJECT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SAVE_DIRECT</PARAMETER>
+       <DEFAULT>&apos;X&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHAR01</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FFORMAT</PARAMETER>
+       <DEFAULT>&apos;*&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>TLINE-TDFORMAT</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>FLINES</PARAMETER>
+       <DBSTRUCT>TLINE</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_INIT</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>NO_SAVE</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>FID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Text ID of the text to be created</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FLANGUAGE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Language of the text to be created</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name of the text to be created</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FOBJECT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Object of the text to be created</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SAVE_DIRECT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Character Field of Length 1</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FFORMAT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tag column</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FLINES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Lines of the text to be created</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_INIT</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Creation of text did not work</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_SAVE</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Saving of the text did not work</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
